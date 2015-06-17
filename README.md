@@ -22,10 +22,10 @@ more see at [cnode](https://cnodejs.org/topic/552b3b9382388cec50cf6d95)
 ## Usages
 
     var express       = require('express');
-    var res.api       = require('res.api');
+    var res_api       = require('res.api');
   
     var app = new express();
-    app.use(res.api);
+    app.use(res_api);
     
   
 then in some route 
