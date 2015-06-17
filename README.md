@@ -13,6 +13,8 @@ res.api is an express middleware for render json api , it convention over api fo
     }
 
 
+more see at [cnode](https://cnodejs.org/topic/552b3b9382388cec50cf6d95)
+
 ## Install
 
     npm install --save res.api
