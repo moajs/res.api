@@ -30,7 +30,7 @@ more see at [cnode 客户端 API 开发总结](https://cnodejs.org/topic/552b3b9
   
 then in some route 
 
-### way 1
+### way 1：最通用的api接口
 
     return res.api(404 ,err, {
       code : 1,
@@ -67,7 +67,7 @@ response json data
         "msg": "delete failed!"
       }
     }
-### way 2
+### way 2：返回成功带有状态的json数据
 
     
     return res.api(data, {
@@ -106,7 +106,7 @@ response json data
       }
     }
 
-### way 3
+### way 3：最常用的成功返回json数据
 
     return res.api(data);
 
