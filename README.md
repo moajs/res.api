@@ -137,10 +137,15 @@ response json data
       },
       "status": {
         "code": 0,
-        "msg": "deleterequest success!"
+        "msg": "request success!"
       }
     }
     
+## video
+
+录了一段7分钟的视频：
+
+http://pan.baidu.com/s/1eQo4xqi
 
 ## Contributing
 
