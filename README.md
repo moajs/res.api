@@ -32,7 +32,7 @@ then in some route
 
 ### way 1：最通用的api接口
 
-    return res.api(404 ,err, {
+    return res.api(404 , err, {
       code : 1,
       msg  : 'delete failed!'
     });
