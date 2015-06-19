@@ -193,6 +193,7 @@ http://pan.baidu.com/s/1eQo4xqi
 
 ## Version History
 
+- v1.0.6 add api_error()
 - v1.0.0 初始化版本
 
 ## 欢迎fork和反馈
