@@ -19,7 +19,7 @@ res.api is an express middleware for render json api , it convention over api fo
 more see at 
 
 
-- [cnode 客户端 API 开发总结](https://cnodejs.org/topic/552b3b9382388cec50cf6d95)
+- [客户端 API 开发总结](https://cnodejs.org/topic/552b3b9382388cec50cf6d95)
 - [koa.res.api on Koajs](https://github.com/moajs/koa.res.api)
 
 
