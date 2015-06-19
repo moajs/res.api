@@ -1,5 +1,8 @@
 # res.api
 
+[![npm version](https://badge.fury.io/js/res.api.svg)](http://badge.fury.io/js/res.api)
+
+
 res.api is an express middleware for render json api , it convention over api format like this :
 
     {
