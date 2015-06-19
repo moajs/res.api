@@ -140,7 +140,42 @@ response json data
         "msg": "request success!"
       }
     }
+
+### way 4：快捷错误处理
+
+    return res.api_error(err);
     
+the response header is :
+
+    HTTP/1.1 200 Ok
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Methods: GET, POST
+    Access-Control-Allow-Headers: X-Requested-With,content-type, Authorization
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 239
+    ETag: W/"ef-6e66e2da"
+    set-cookie: connect.sid=s%3ApwL-xMS2tCh3qgqp_wyIqukbUKFeJv6S.2EB4449yTlxRWZrRyBXRc9J6Pv%2BNz4M7j35VLIlxE6M; Path=/; Expires=Wed, 17 Jun 2015 15:11:28 GMT; HttpOnly
+    Date: Wed, 17 Jun 2015 14:41:28 GMT
+    Connection: keep-alive
+
+response json data
+ 
+    {
+      "data": {
+        "message": "Cast to ObjectId failed for value \"557a3e326221681d474cf078sdsds\" at path \"_id\"",
+        "name": "CastError",
+        "kind": "ObjectId",
+        "value": "557a3e326221681d474cf078sdsds",
+        "path": "_id"
+      },
+      "status": {
+        "code": -1,
+        "msg": "api error"
+      }
+    }
+
+
 ## video
 
 录了一段7分钟的视频：

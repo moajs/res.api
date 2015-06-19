@@ -4,7 +4,7 @@
  * MIT Licensed
  */
 
-// api header
+// api middleware
 module.exports = function(req, res, next) {
   console.log('set api header');
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -12,6 +12,7 @@ module.exports = function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
   
   res.api = api;
+  res.api_error = api_error;
   
   next();
 };
@@ -89,4 +90,12 @@ function api(){
       status  : status
     })
   }
+}
+
+function api_error(data){
+  var _res = this;
+  _res.api(data,{
+      code : -1,
+      msg  : 'api error'
+  });
 }

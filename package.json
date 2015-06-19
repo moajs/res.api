@@ -1,7 +1,7 @@
 {
   "name": "res.api",
-  "version": "1.0.5",
-  "description": "",
+  "version": "1.0.6",
+  "description": "res.api is an express middleware for render json api , it convention over api format",
   "main": "index.js",
   "scripts": {
     "start": "npm publish .",
