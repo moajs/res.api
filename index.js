@@ -42,7 +42,7 @@ module.exports = function(req, res, next) {
 function api(){
   var _res = this;
 
-  if(typeof(_res) != "object" || _is_not_has_prototype('end')){
+  if(typeof(_res) != "object" && _is_not_has_prototype('end')){
     arguments = [];
     console.dir('not a object')
   }
