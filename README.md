@@ -183,6 +183,10 @@ response json data
       }
     }
 
+## jsonp support
+
+    res.is_jsonp = true
+    return res.api(data);
 
 ## video
 
