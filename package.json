@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/moajs/res.api/issues"
   },
-  "homepage": "https://github.com/moajs/res.api#readme"
+  "homepage": "https://github.com/moajs/res.api#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "express": "^4.13.3",
+    "jsonp": "^0.2.0",
+    "jsonp-client": "^1.0.1",
+    "mocha": "^2.2.5",
+    "supertest": "^1.0.1"
+  }
 }
