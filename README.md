@@ -171,18 +171,49 @@ response json data
  
     {
       "data": {
-        "message": "Cast to ObjectId failed for value \"557a3e326221681d474cf078sdsds\" at path \"_id\"",
-        "name": "CastError",
-        "kind": "ObjectId",
-        "value": "557a3e326221681d474cf078sdsds",
-        "path": "_id"
       },
       "status": {
         "code": -1,
         "msg": "api error"
       }
     }
+    
+配置项
 
+- res.api_error_code; 默认是200
+- res.api_error_status_code; 默认是-1
+- res.api_error_status_msg; 默认是'api error'
+
+在`return res.api_error(err);`之前设置
+
+    res.api_error_code = 400;
+    return res.api_error(err);
+    
+the response header is :
+
+    HTTP/1.1 400 Ok
+    X-Powered-By: Express
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Methods: GET, POST
+    Access-Control-Allow-Headers: X-Requested-With,content-type, Authorization
+    Content-Type: application/json; charset=utf-8
+    Content-Length: 239
+    ETag: W/"ef-6e66e2da"
+    set-cookie: connect.sid=s%3ApwL-xMS2tCh3qgqp_wyIqukbUKFeJv6S.2EB4449yTlxRWZrRyBXRc9J6Pv%2BNz4M7j35VLIlxE6M; Path=/; Expires=Wed, 17 Jun 2015 15:11:28 GMT; HttpOnly
+    Date: Wed, 17 Jun 2015 14:41:28 GMT
+    Connection: keep-alive
+
+response json data
+ 
+    {
+      "data": {
+      },
+      "status": {
+        "code": -1,
+        "msg": "api error"
+      }
+    }
+    
 ## jsonp support
 
     res.is_jsonp = true
@@ -205,6 +236,7 @@ http://pan.baidu.com/s/1eQo4xqi
 
 ## Version History
 
+- v1.0.11 支持自定义api_error信息
 - v1.0.6 add api_error()
 - v1.0.0 初始化版本
 
